@@ -1,0 +1,64 @@
+:root {
+    --bg-color: #f5f5f5;
+    --card-bg: #ffffff;
+    --text-color: #212121;
+    --accent-color: #1976d2;
+    --border-color: #e0e0e0;
+    --input-bg: #ffffff;
+    --nav-bg: #ffffff;
+    --button-bg: #e3f2fd;
+    --button-text: #000;
+    --hover-bg: #d0e3ff;
+}
+
+:root.dark {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --accent-color: #4fc3f7;
+    --border-color: #2c2c2c;
+    --input-bg: #2a2a2a;
+    --nav-bg: #1a1a1a;
+    --button-bg: #333;
+    --button-text: #fff;
+    --hover-bg: #333344;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: flex-start;
+    margin: 30px auto 50px auto;
+}
+
+.intro {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.intro_name{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.intro_text {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 50px;
+    padding: 30px;
+    text-align: left;
+    border: 2px solid var(--button-bg);
+    border-radius: 70px;
+    background-color: var(--button-bg);
+}
+
+@media (max-width: 768px) {
+    .intro_name {
+        font-size: 43px;
+    }
+
+    .intro_text {
+        font-size: 13px;
+    }
+}

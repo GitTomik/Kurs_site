@@ -1,0 +1,134 @@
+.container_3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    left: 50px;
+    width: 250px;
+    background: var(--card-bg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow-y: auto;
+}
+
+.tab-button {
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.tab-button:hover {
+    background: var(--hover-bg);
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.sub-tabs {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 15px;
+}
+
+.sub-tabs.active {
+    display: flex;
+}
+
+.main-tab {
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.sub-tab {
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.sub-tab:hover, .main-tab:hover {
+    background: var(--hover-bg);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main {
+    transition: margin-top 0.3s ease-in-out; /* 🔹 Плавний ефект */
+}
+
+.wrapper.nav-active .main {
+    margin-top: 300px; /* 🔹 Контент зміщується вниз */
+    transition: margin-top 0.3s ease-in-out; /* 🔹 Плавний ефект */
+}
+
+.menu-toggle {
+    display: none; /* 🔹 Приховано на десктопі */
+}
+
+/* Відображати кнопку тільки на мобільних */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        writing-mode: vertical-rl; /* 🔹 Вертикальний текст */
+        text-orientation: mixed;
+        background: var(--button-bg);
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 18px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar {
+        left: -300px; /* 🔹 Початково приховано */
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        left: 10px; /* 🔹 Відкривається при натисканні */
+    }
+
+    .content {
+        max-width: 70%;
+        margin: 0 auto; /* 🔹 Центруємо контент */
+    }
+
+
+}

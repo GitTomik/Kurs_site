@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  maximum-scale=1.0, user-scalable=0">
+    <title>Курсовий проєкт</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/theory.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container_1">
+            <button id="menu-toggle" class="menu-icon">☰</button>
+            <nav class="nav" id="nav-menu">
+                <a href="index.html" class="a_nav">Головна</a>
+                <a href="intro.html" class="a_nav">Вступ</a>
+                <a href="theory.html" class="a_nav">Теорія</a>
+                <a href="tasks.html" class="a_nav">Задачі</a>
+                <a href="calculator.html" class="a_nav">Калькулятор</a>
+                <a href="calculator.html" class="a_nav">Висновок</a>
+            </nav>
+            <div class="settings">
+                <button id="toggle-theme"><span id="theme-icon" class="button_nav">🌙</span></button>
+                <button id="toggle-lang" class="button_nav">🇬🇧</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container" >
+            <div class="container_3">
+                <div class="menu-toggle">Меню</div>
+                <div class="sidebar">
+                    <!-- Додаткові вкладки для теоретичної частини -->
+                    <button class="tab-button" data-tab="intro">Вступ до чисельних методів</button>
+                    <button class="tab-button" data-tab="comparison">Порівняння точності методів</button>
+                    <button class="tab-button" data-tab="errors">Чисельні помилки та їх вплив</button>
+                    <button class="tab-button" data-tab="graphical">Графічна інтерпретація методів</button>
+
+                    <!-- Головні розділи чисельних методів -->
+                    <button class="main-tab" data-tab="nonlinear">Методи розв’язання нелінійних рівнянь</button>
+                    <div class="sub-tabs" id="nonlinear">
+                        <button class="sub-tab" data-tab="bisection">Метод половинного ділення</button>
+                        <button class="sub-tab" data-tab="newton">Метод дотичних</button>
+                        <button class="sub-tab" data-tab="secant">Метод хорд</button>
+                        <button class="sub-tab" data-tab="secant">Метод простої ітерації</button>
+                    </div>
+
+                    <button class="main-tab" data-tab="interpolation">Інтерполяційні методи</button>
+                    <div class="sub-tabs" id="interpolation">
+                        <button class="sub-tab" data-tab="lagrange">Поліном Лагранжа</button>
+                        <button class="sub-tab" data-tab="newton-inter">Метод Ньютона</button>
+                    </div>
+
+                    <button class="main-tab" data-tab="integration">Чисельне інтегрування</button>
+                    <div class="sub-tabs" id="integration">
+                        <button class="sub-tab" data-tab="rectangle">Метод прямокутників</button>
+                        <button class="sub-tab" data-tab="trapezoid">Метод трапецій</button>
+                        <button class="sub-tab" data-tab="simpson">Метод Сімпсона</button>
+                    </div>
+
+                    <button class="main-tab" data-tab="systems">Методи для систем рівнянь</button>
+                    <div class="sub-tabs" id="systems">
+                        <button class="sub-tab" data-tab="gauss">Метод Гаусса</button>
+                        <button class="sub-tab" data-tab="progonka">Метод Гауса з вибором головного елемента</button>
+                        <button class="sub-tab" data-tab="jacobi">Жордано-Гауса</button>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <!-- Додаткові теоретичні розділи -->
+                    <div class="tab-content" id="intro">
+                        <h2>Вступ до чисельних методів</h2>
+                        <p>Основи чисельних методів, їх важливість та застосування...</p>
+                    </div>
+
+                    <div class="tab-content" id="comparison">
+                        <h2>Порівняння точності методів</h2>
+                        <p>Аналіз різних методів та їх точність у практичних обчисленнях...</p>
+                    </div>
+
+                    <div class="tab-content" id="errors">
+                        <h2>Чисельні помилки та їх вплив</h2>
+                        <p>Джерела чисельних похибок та способи їх мінімізації...</p>
+                    </div>
+
+                    <div class="tab-content" id="graphical">
+                        <h2>Графічна інтерпретація методів</h2>
+                        <p>Візуалізація роботи чисельних методів для кращого розуміння...</p>
+                    </div>
+
+                    <!-- Контент для чисельних методів -->
+                    <div class="tab-content" id="bisection">
+                        <h2>Метод бісекції</h2>
+                        <p>Опис методу...</p>
+                    </div>
+
+                    <div class="tab-content" id="newton">
+                        <h2>Метод Ньютона</h2>
+                        <p>Опис методу...</p>
+                    </div>
+
+                    <div class="tab-content" id="secant">
+                        <h2>Метод секущих</h2>
+                        <p>Опис методу...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Курсовий проєкт з Чисельних Методів</p>
+        </div>
+    </footer>
+</div>
+<script src="../scripts/theme.js"></script>
+<script src="../scripts/lang.js"></script>
+<script src="../scripts/menu.js"></script>
+<script src="../scripts/effects.js"></script>
+<script src="../scripts/theory.js"></script>
+</body>
+</html>
